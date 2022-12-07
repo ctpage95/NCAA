@@ -165,7 +165,7 @@ if page == 'Head-to-Head':
     if team1 == team2:
         st.header("Please select two different teams")
     elif team1_prob > team2_prob:
-        st.header("<h1 style='text-align: center;", team1 + " " + "Wins!")
+        st.header(team1 + " " + "Wins!")
     else:
         st.header(team2 + " " + "Wins!")
 
