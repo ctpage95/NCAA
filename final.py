@@ -332,7 +332,7 @@ if page == 'Map':
         z = schooldata_gb['Measure'], # Data to be color-coded
         locationmode = 'USA-states', # set of locations match entries in `locations`
         colorscale = 'Blues',
-        colorbar_title = "NCAA Tournament Wins",
+        colorbar_title = f"{metric}",
     ))
 
 
