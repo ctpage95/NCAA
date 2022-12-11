@@ -1,2 +1,2 @@
 plotly.express
-sklearn.model_selection
+scikit-learn
