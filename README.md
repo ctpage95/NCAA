@@ -43,3 +43,5 @@ Using this map, you will be able to gather insights on how each US state compare
 3. Final Four Appearances
 4. Total Tournament Appearances 
 5. Regular Season Conference Champions
+
+This data is gathered by aggregating all individual School data on their respective States.
