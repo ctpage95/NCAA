@@ -25,10 +25,6 @@ import time
 
 #######################################################################
 
-# Questions for Monday:
-# - If I add a cache function, will it still scrape the web everytime the page is run
-# - Fix the map
-
 # Build the app interface
 
 # Sidebar
