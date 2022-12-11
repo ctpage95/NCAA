@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 import xgboost as xgb
 from collections import Counter
 from imblearn.over_sampling import RandomOverSampler  
-from sklearn.model_selection import RandomizedSearchCV
+#from sklearn.model_selection import RandomizedSearchCV
 #import calendar
 import time
 #from datetime import datetime 
@@ -24,6 +24,10 @@ import time
 
 
 #######################################################################
+
+# Questions for Monday:
+# - If I add a cache function, will it still scrape the web everytime the page is run
+# - Fix the map
 
 # Build the app interface
 
@@ -167,9 +171,6 @@ if page == 'Head-to-Head':
     model_results = st.button("Rerun Model")
 
     if model_results:
-        # with st.spinner('Loading...'):
-        #     time.sleep()
-        #     st.success('Done!')
 
         my_bar = st.progress(0)
 
@@ -264,6 +265,7 @@ if page == 'Top Teams':
     states_dict = dict(zip(schooldata['School'], schooldata['State']))
     model_probs = pd.read_csv("model_probs.csv")
     model_probs = model_probs.sort_values(['xgb_probabilities'], ascending=[False])
+    #model_probs = model_probs.drop('Unnamed: 0')
     idx = 0
     model_probs.insert(idx, 'index', value=range(len(model_probs)))
     model_probs['index'] = model_probs['index']+1
@@ -313,6 +315,7 @@ if page == 'Map':
                             ["Avg. Win-Loss Percentage", "Total Championship Wins", "Final Four Appearances",
                             "Total Tournament Appearances", "Regular Season Conference Champions"])
 
+    #schooldata_gb = schooldata.groupby('State')
     if metric == "Avg. Win-Loss Percentage":
         schooldata_gb = schooldata.groupby(['State_abrv'])['W-L%'].mean().reset_index(name='Measure')
     elif metric == "Total Championship Wins":
@@ -339,5 +342,3 @@ if page == 'Map':
     )
 
     st.plotly_chart(fig)
-    
-    
