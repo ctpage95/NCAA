@@ -45,3 +45,12 @@ Using this map, you will be able to gather insights on how each US state compare
 5. Regular Season Conference Champions
 
 This data is gathered by aggregating all individual School data on their respective States.
+
+
+## Future Work:
+- Add in timestamp functionality to only allow pulling data once a day.
+- Maintain data integrity with data being pulled from the source and how the data is being used in the models.
+- Add more visuals to gather more insights
+
+## Data Gathering Process:
+The data was gathered using webscraping tools in Python. Once the data was gathered, it required a lot of cleaning and outside source data as well. Tournament winners for each year were gathered from https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_champions) and then the Naismith Award winner each year was gathered from https://en.wikipedia.org/wiki/Naismith_College_Player_of_the_Year. Once scraped, the values were mapped to our current dataset to attach to the teams in the respective years. After all the data was gathered, the model was created using an XGBoost method.
