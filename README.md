@@ -9,13 +9,13 @@ Streamlit App: https://ctpage95-ncaa-final.streamlit.app/
 *Note: Modeling was complete to determine the probability that each team has to win the National Champiosnhip in March 2023.*
 
 ## In this app:
-- In this app you will be able to navigate across three pages:
+In this app you will be able to navigate across three pages:
   1. Head-to-Head
   2. Top Teams
   3. Map (A map of statistics by state)
 
 ### Head-to-Head
-- This is where you are able to compare data across all teams and determine who is more likely to win the match-up.
+This is where you are able to compare data across all teams and determine who is more likely to win the match-up.
 
 - The first option you have is to rerun the most current data. By clicking this button, it will scrape whatever the current data is from the data source (https://www.sports-reference.com/cbb/). This data is updated on a regular basis and will modify outcomes as more data comes in for the season. We want to avoid running this too much, as we want to avoid making excessive calls to the site. Once a day is sufficient.
 
@@ -36,3 +36,10 @@ The first section comes with a slider where you can display the top teams. The s
 This section gives you the ability to choose a comparison method. You can choose to compare teams based on individual team names, conference, and state. Once you select the comparison method in the drop down, another drop down will appear with the options. The ranks are in the table so you can see how each team in the subset that you select compare to one another.
 
 
+### Map
+Using this map, you will be able to gather insights on how each US state compares to one another on a variety of metrics. The metrics that you can compare are:
+1. Avg. Win-Loss Percentage
+2. Total Championship Wins 
+3. Final Four Appearances
+4. Total Tournament Appearances 
+5. Regular Season Conference Champions
