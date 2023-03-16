@@ -236,8 +236,8 @@ if page == 'Head-to-Head':
     prob_data_filtered.to_csv("prob_data_filtered.csv")
 
 
-    team1_prob = prob_data_filtered[prob_data_filtered["School"].isin([team1])]["xgb_probabilities"].apply(lambda x: float(x))
-    team2_prob = prob_data_filtered[prob_data_filtered["School"].isin([team2])]["xgb_probabilities"].apply(lambda x: float(x))
+    team1_prob = float(prob_data_filtered[prob_data_filtered["School"].isin([team1])]["xgb_probabilities"])
+    team2_prob = float(prob_data_filtered[prob_data_filtered["School"].isin([team2])]["xgb_probabilities"])
 
     if team1 == team2:
         st.subheader("Please select two different teams")
